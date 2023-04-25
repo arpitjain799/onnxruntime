@@ -773,8 +773,7 @@ if (onnxruntime_USE_TENSORRT)
     if (onnxruntime_SKIP_AND_PERFORM_FILTERED_TENSORRT_TESTS)
        # TRT EP package pipelines takes much longer time to run tests with TRT 8.5. We can't use placeholder to reduce testing time due to application test deadlock.
        # Therefore we only run filtered TRT EP tests.
-      list(APPEND test_all_args "--gtest_filter=*LayerNestedSubgraph" "--gtest_repeat=1000" )
-      #list(APPEND test_all_args "--gtest_filter=*tensorrt_*:*TensorrtExecutionProviderTest*" )
+      list(APPEND test_all_args "--gtest_filter=*tensorrt_*:*TensorrtExecutionProviderTest*" )
       #list(APPEND test_all_args "--gtest_filter=-*cpu_*:*cuda_*:*ContribOpTest*:*QuantGemmTest*:*QLinearConvTest*:*MurmurHash3OpTest*:*PadOpTest*:*QLinearConvTest*" )
     else()
       # TRT EP CI takes much longer time when updating to TRT 8.2
