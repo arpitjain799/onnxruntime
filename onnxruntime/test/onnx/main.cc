@@ -1026,12 +1026,6 @@ select from 'TF8', 'TF16', 'UINT8', 'FLOAT', 'ITENSOR'. \n)");
     broken_tests.insert({"tf_resnet_v2_50", "TRT Engine couldn't be created"});
     broken_tests.insert({"convtranspose_1d", "1d convtranspose not supported yet"});
     broken_tests.insert({"convtranspose_3d", "3d convtranspose not supported yet"});
-    broken_tests.insert({"sequence_map_add_2_sequences", "not supported by TensorRT EP"});
-    broken_tests.insert({"sequence_map_extract_shapes", "not supported by TensorRT EP."});
-    broken_tests.insert({"sequence_map_add_1_sequence_1_tensor", "not supported by TensorRT EP."});
-    broken_tests.insert({"sequence_map_identity_1_sequence", "not supported by TensorRT EP."});
-    broken_tests.insert({"sequence_map_identity_2_sequences", "not supported by TensorRT EP."});
-    broken_tests.insert({"sequence_map_identity_1_sequence_1_tensor", "not supported by TensorRT EP."});
   }
 
   if (enable_cuda) {
