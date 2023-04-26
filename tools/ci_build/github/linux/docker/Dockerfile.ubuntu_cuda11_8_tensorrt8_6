@@ -58,6 +58,8 @@ ARG ONNXRUNTIME_REPO=https://github.com/Microsoft/onnxruntime
 
 # The local directory into which to clone ORT.
 ARG ONNXRUNTIME_LOCAL_CODE_DIR=/home/$BUILD_USER/code
+ENV PATH /usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/src/tensorrt/bin:${ONNXRUNTIME_LOCAL_CODE_DIR}/cmake-3.24.3-linux-x86_64/bin:/opt/miniconda/bin:${PATH}
+ENV DEBIAN_FRONTEND=noninteractive
 
 # The git branch of ORT to checkout and build.
 ARG ONNXRUNTIME_BRANCH=main
